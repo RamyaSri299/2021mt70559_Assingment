@@ -1,0 +1,254 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="checkout-wrapper">
+        <div class="checkout-head-new">
+          <h1>
+            <img
+              src="https://www.bookswagon.com/images/checkout-head-ico.png"
+              alt="Cart"
+            />
+            CheckOut your Cart
+          </h1>
+        </div>
+        <div class="checkout">
+          <div class="login">
+            <div class="customer">
+              <div class="title">
+                <mat-card class="example-card">
+                  <mat-card-header class="addressHeading">
+                    <mat-card-title>
+                      <i
+                        class="fas fa-shipping-fast"
+                        style="font-size: 30px"
+                      ></i>
+                      <span class="addressTitle">Shipping Address</span>
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                      <p class="addressSubTitle">
+                        Select or Add new shipping adddress
+                      </p>
+
+                      <button mat-button class="change" (click)="showAddress()">
+                        Change
+                      </button>
+                    </mat-card-subtitle>
+                  </mat-card-header>
+
+                  <mat-card-content *ngIf="!displayAddress">
+                    <mat-card>
+                      <mat-card-content class="AddressFormCard">
+                        <form class="form-group">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="RecipientName" class="formfieldName"
+                                  >Recipient Name</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="RecipientName"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="contactNumber" class="formfieldName"
+                                  >Contact Number(Mobile)</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="10 Digit Mobile Number"
+                                />
+                              </div>
+                            </div>
+                            <br /><br />
+
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="Address1" class="formfieldName"
+                                  >Address Line 1</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="House Number, Apartment/colony Name"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="Address2" class="formfieldName"
+                                  >Address Line 2</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Area or Location"
+                                />
+                              </div>
+                            </div>
+
+                            <br /><br />
+
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="landmark" class="formfieldName"
+                                  >Landmark</label
+                                >
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="Pincode" class="formfieldName"
+                                  >Pincode</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Pincode"
+                                />
+                              </div>
+                            </div>
+
+                            <br /><br />
+
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="State" class="formfieldName"
+                                  >State</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="State"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="City" class="formfieldName"
+                                  >City</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="City"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                              <label for="addressType" class="formfieldName"
+                                >Select your address type</label
+                              >
+                              <div>
+                                <mat-radio-group aria-label="Select an option">
+                                  <mat-radio-button value="Home"
+                                    >Home</mat-radio-button
+                                  >
+                                  <mat-radio-button value="office"
+                                    >Office</mat-radio-button
+                                  >
+                                </mat-radio-group>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </mat-card-content>
+
+                      <mat-card-actions>
+                        <button mat-button class="save">Save & Deliver</button>
+                        <button mat-button class="cancel">
+                          Cancel & Go Back
+                        </button>
+                      </mat-card-actions>
+                    </mat-card>
+                  </mat-card-content>
+                </mat-card>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-summary">
+            <div class="ordersummary-inn">
+              <div class="head">
+                <p>Order Summary</p>
+                <div class="clearfloat"></div>
+              </div>
+              <div class="mid-details">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="os-info">Items</td>
+                      <td class="os-coloun">:</td>
+                      <td class="os-amount">
+                        <label>1</label>
+                      </td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td>Sub Total</td>
+                      <td class="os-coloun">:</td>
+                      <td class="os-amount">
+                        <label id="ctl00_cpBody_OrderSummary_lblSubTotal"
+                          >₹119</label
+                        >
+                      </td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label id="ctl00_cpBody_OrderSummary_lblShippingText"
+                          >Shipping (India)</label
+                        >
+                      </td>
+                      <td class="os-coloun">
+                        <label id="ctl00_cpBody_OrderSummary_lblShippingColon">
+                          :</label
+                        >
+                      </td>
+                      <td class="os-amount">
+                        <label id="ctl00_cpBody_OrderSummary_lblShippingCost"
+                          >₹39</label
+                        >
+                      </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="os-footer">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="os-info">Amount Payable</td>
+                      <td class="os-coloun">:</td>
+                      <td class="os-amount" style="color: #bc3232">
+                        <label >₹158</label>
+                      
+                      </td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+               <div class="ftdelivery">
+                <label class="deliverytime">Ships within 4-6 days.</label>
+           </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+   

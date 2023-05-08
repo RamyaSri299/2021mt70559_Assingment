@@ -1,0 +1,138 @@
+<div class="row">
+    <div class="col-3">
+        <div class="left-column">
+            <div class="bc-menu">
+                <div class="title">Browse Categories</div>
+                <ul class="bullet-link">
+                    <li class="first-leve">
+                        <a id="3" [routerLink]="'/NewBookAdded'">Art &amp; Photography</a>
+                    </li>
+                    <li class="second-leve selected">
+                        <a id="97" [routerLink]="'/NewBookAdded'">Architecture</a>
+                    </li>
+                    <li class="third-leve">
+                        <a id="100" [routerLink]="'/NewBookAdded'"
+                            (click)="FilterBookTypes('Architectural structure & design')">
+                            Architectural structure &amp; design</a>
+                    </li>
+                    <li class="third-leve">
+                        <a id="102" [routerLink]="'/NewBookAdded'"
+                            (click)="FilterBookTypes('Architecture: professional practice')">
+                            Architecture: professional practice</a>
+                    </li>
+                    <li class="third-leve"><a id="114" [routerLink]="'/NewBookAdded'"
+                            (click)="FilterBookTypes('History of architecture')">
+                            History of architecture</a>
+                    </li>
+                    <li class="third-leve">
+                        <a id="99" [routerLink]="'/NewBookAdded'"
+                            (click)="FilterBookTypes('Individual architects & architectural firms')">
+                            Individual architects &amp; architectural firms</a>
+                    </li>
+                    <li class="third-leve">
+                        <a id="112" [routerLink]="'/NewBookAdded'"
+                            (click)="FilterBookTypes('Landscape art & architecture')">
+                            Landscape art &amp; architecture</a>
+                    </li>
+                    <li class="third-leve">
+                        <a id="111" [routerLink]="'/NewBookAdded'"
+                            (click)="FilterBookTypes('Professional interior design')">
+                            Professional interior design</a>
+                    </li>
+                    <li class="third-leve">
+                        <a id="103" [routerLink]="'/NewBookAdded'"
+                            (click)="FilterBookTypes('Public buildings: civic, commercial, industrial')">
+                            Public buildings: civic, commercial, industrial, etc</a>
+                    </li>
+                    <li class="third-leve">
+                        <a id="110" [routerLink]="'/NewBookAdded'"
+                            (click)="FilterBookTypes('Religious buildings')">
+                            Religious buildings</a>
+                    </li>
+                    <li class="third-leve">
+                        <a id="106" [routerLink]="'/NewBookAdded'"
+                            (click)="FilterBookTypes('Residential buildings, domestic buildings')">
+                      Residential buildings, domestic buildings</a>
+                    </li>
+                    <li class="third-leve">
+                        <a id="98" [routerLink]="'/NewBookAdded'"
+                            (click)="FilterBookTypes('Theory of architecture')">
+                            Theory of architecture</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="card" *ngFor="let book of GetAllBooks" >
+            <mat-card class="example-card" *ngFor="let booklist of book.artsPhotographies">
+                <mat-card-header>
+                    <mat-card-title>
+                        <a class="mat-BookName" href="#"> {{booklist.bookName}}</a>
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        <div class="author-publisher">
+                            <p style=" color:#555555"> By:
+                                <span style="font-size: 15px; color: black;"> {{booklist.author}}</span>
+                            </p>
+                            <p style="color:#555555"> Publisher:
+                                <span style="font-size: 15px;  color: black;"> {{booklist.publisher}}</span>
+                            </p>
+                        </div>
+                    </mat-card-subtitle>
+                </mat-card-header>
+
+                <mat-card-content>
+                    <div class="price-attrib">
+                        <div class="price">
+                            <div class="sell">{{booklist.price | currency:'INR':'symbol':'3.0'}}</div>
+                        </div>
+                        <div class="right-border1"></div>
+                        <div class="attributes">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="attributes-head">Binding:</div>
+                                        </td>
+                                        <td>
+                                            <div class="attributes-title">{{booklist.bindingtype}}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="attributes-head">Release:</div>
+                                        </td>
+                                        <td>
+                                            <div class="attributes-title">{{booklist.releaseDate | date}} </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="attributes-head">Language:</div>
+                                        </td>
+                                        <td>
+                                            <div class="attributes-title">{{booklist.languagetype}}</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="clearfloat"></div>
+                        </div>
+                        <div class="clearfloat"></div>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button  class="btn btn-danger" [routerLink]="'/SelectedBook'" (click)="addtoCart(booklist)" >Buy Now</button>
+                    <button class="btn btn-black" [routerLink]="'/WishlistBook'">Add to Wishlist</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+    </div>
+        <div class="col-1 AddBook">
+            <button class="btn btn-success">Add Book</button>
+        </div>
+
+    
+</div>

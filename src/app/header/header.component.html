@@ -1,0 +1,73 @@
+<!-- <div class="row d-flex align-items-center justify-content-center">
+    <div class="col-sm-11">
+        <ul class="list-inline m-0 p-0" style="margin: auto;  max-width: 100%; float: none;">
+            <li id="ctl00_lihome" class="dropdown list-inline-item">
+                <a class="desktopdropdowninit dropdown-toggle" href="#">Book
+                <span class="caret"></span>
+                </a>
+            </li>
+
+            <li id="ctl00_linewrelease" class="list-inline-item"><a href="https://www.bookswagon.com/promo-best-seller/new-arrivals/99325F010C89">New Arrivals</a>
+            </li>
+            <li id="ctl00_lipreorder" class="list-inline-item"><a href="https://www.bookswagon.com/promo-best-seller/box-sets/389DA2389287">Box Sets</a> </li>
+            <li id="ctl00_libestseller" class="list-inline-item"><a href="https://www.bookswagon.com/promo-best-seller/best-seller/03AC998EBDC2">Best sellers</a> </li>
+            <li id="ctl00_liTextBook" class="list-inline-item"><a href="https://www.bookswagon.com/promo/fiction-books/9D7S5K6U3M">Fiction Books</a>
+            </li>
+            <li id="ctl00_liAW" class="list-inline-item"><a href="https://www.bookswagon.com/promo-best-seller/award-winning/2109CDC4B4DC">Award Winners</a>
+            </li>
+            <li id="ctl00_liRequestBook" class="list-inline-item"><a href="https://www.bookswagon.com/featured-authors">Featured Authors</a>
+            </li>
+              <li id="ctl00_li1" class="list-inline-item"><a href="https://www.bookswagon.com/requestbook">Request a Book</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-1">
+        <ul class="list-inline float-right mb-0 text-white">
+
+            <li class="list-inline-item font-weight-bold ">
+                <a class="text-white p-0" href="https://play.google.com/store/apps/details?id=com.bookswagon" target="_blank">
+                    <img alt="App Icon" style="height: 40px;" class="wihouthover" src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/android_withouthover.svg">
+                    <img alt="App Icon" style="height: 40px;" class="withhover" src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/android_withhover.svg">
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+</div> -->
+<div class="row ">
+    <div class="col-md-2 col-sm-2 col-2">
+        <div class="logo">
+            <img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/logo-new.png" alt="logo">
+        </div>
+    </div>
+</div>
+
+
+<header>
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-sm-11">
+                <div class="menu-icon" [class.menu-icon_class]="menu_icon_Variable"(click)="OpenMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="list-inline" [class.menuClass]="menuVariable" >
+                    <ul> 
+                        <li class="list-inline-item">
+                        <a class="dropdown-toggle"  [routerLink]="'/books'" Style="color:white">Book
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                        <li class="list-inline-item">New Arrivals</li>
+                        <li class="list-inline-item">Best Sellers</li>
+                        <li class="list-inline-item">Award Winners</li>
+                        <li class="list-inline-item">Featured Authors </li>
+                        <li class="list-inline-item">Request a Book</li>
+                    </ul>
+                </div>
+                  
+                
+            </div>
+        </div>
+</header>

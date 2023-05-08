@@ -1,0 +1,196 @@
+
+.checkout-wrapper{
+    float: left;
+    width: 100%;
+}
+.checkout-wrapper .checkout-head-new  {
+    padding:10px 0 0 0;
+    color: #bc3232;
+    display: inline-block;
+    width: 100%;
+
+}
+.checkout-wrapper .checkout-head-new h1{
+  
+   font-size: 24px;
+   text-align: center;
+}
+checkout-head-new img {
+    position: relative;
+    top: 4px;
+}
+ .checkout {
+        width: 100%;
+        float: left;
+        padding: 0;
+        margin: 40px 0 0 0;
+}
+@media  only screen and (max-width: 992px){
+ 
+    .checkout .login {
+        width: auto;
+        margin-bottom: 20px;
+        max-width: 97.5%;
+        float: none;
+    }
+}
+
+.checkout .login {
+    margin-left: 10px;
+    width: 75%;
+    padding-bottom: 10px;
+    float: left;
+    border: solid 1px #ccc;
+}
+.checkout div {
+    font-family: Lato,sans-serif !important;
+    font-size: 14px;
+}
+.checkout .login .customer {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+/* .checkout .login .customer .title {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 20px 0;
+    float: left;
+    width: 100%;
+    text-align: center;
+} */
+
+.example-card{
+    /* font-size: 18px;
+    font-weight: 400;
+    padding: 20px 0;
+    float: left; */
+    width: 100%;
+    text-align: center;
+ 
+}
+.addressHeading{
+    border: solid 1px #ccc;
+    height:auto
+}
+.addressTitle{
+font-size: 20px;
+font-weight: bold;
+padding: 8px;
+}
+.addressSubTitle{
+    margin-left: 100px;
+}
+.form-group{
+    width: 100%;
+  
+}
+.change{
+   margin-left: 230%; 
+    font-family: roboto, san-serif;
+    text-transform: uppercase;
+    background-color:rgb(187, 187, 216);
+    font-weight: 500;
+    display: flex;
+    height: 30px;
+    width: 35%;
+}
+.save{
+    background-color: rgb(223, 164, 54);
+    color: cornsilk;
+    font-weight: bold;
+}
+.cancel{
+    color: #ffff;
+    font-weight: bold;
+    background-color: rgb(134, 75, 75);
+    margin-left: 10px;
+}
+@media only screen and (max-width: 1300px){
+    .change{
+        margin-left: auto; 
+        
+     }
+}
+.AddressFormCard{
+    line-height: 40px;
+
+
+}
+.formfieldName{
+  font-weight: bold;
+}
+ .order-summary{
+    float: right;
+    width: 225px;
+}
+@media only screen and (max-width:1300px) {
+    .order-summary{
+        float: left;
+        width: 75%;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+}
+.ordersummary-inn{
+    border: solid 1px #ccc;
+    background-color: #fff;
+    margin: 0 0 10px 0;
+    
+}
+ .checkout .order-summary .head {
+        background-color: #f4f4f4;
+        border-bottom: solid 1px #ccc;
+        padding: 5px;
+        overflow: hidden;
+        font-size: 20px;
+}
+.checkout .order-summary .head p {
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 700;
+    float: left;
+}
+.clearfloat{
+clear: both;
+}
+ .mid-details {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 5px;
+}
+table {
+    border-collapse: collapse;
+}
+.os-info {
+    width: 102px;
+}
+.os-coloun {
+    width: 10px;
+    text-align: right;
+}
+.os-amount {
+    text-align: right;
+    width: 62px;
+}
+.os-footer {
+    padding: 0 0 5px 5px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.ftdelivery .deliverytime {
+    padding-bottom: 5px;
+    display: block;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    margin-top: 3px;
+}
+
+.deliverytime {
+    color: #090;
+    font-size: 12px;
+    font-weight: 700;
+    padding-left: 5px;
+}

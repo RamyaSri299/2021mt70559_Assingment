@@ -1,0 +1,238 @@
+<div class="row">
+    <div class="col">
+
+    <mat-card class="example-card">
+        <mat-card-header class="header">
+          <div>
+            <i class='fas fa-shopping-cart'></i>
+            <span style="margin-left: 10px;"> My Shopping Cart </span>
+            <label class="lblitems">({{totalBooks}} item)</label>
+          </div>
+        </mat-card-header>
+  
+        <mat-card-content >
+            <ng-container *ngIf="SelectedBookInfo.length!=0">
+                <div class="tab_container" >
+            
+                    <div class="tab_content" id="tab1" style="display: block;">
+                      <div id="BookCart_uplnShopping">
+                        <div class="full-loader" style="display: none;">
+                          <div id="loader">
+                          </div>
+                        </div>
+                        <input type="hidden" name="BookCart$hdnTotalQty" id="BookCart_hdnTotalQty" value=" (1 items)">
+                        <div class="shopping-main">
+                          <div class="shopping-top">
+                            <div id="BookCart_lvCart_divCartMsg" class="shopping-msg" style="display:none;"></div>
+                            <div class="shopping-head">
+                              <div class="serialno">
+                               ID
+                              </div>
+                              <div class="description">
+                                Item Description
+                              </div>
+                              <div class="quality">
+                                Quantity
+                              </div>
+                              <div class="price">
+                                Item Price
+                              </div>
+                              <div class="total">
+                                Total Price
+                              </div>
+                              <div class="clearfloat">
+                              </div>
+                            </div>
+                            <div class="content">
+                              <div class="shopping-content" *ngFor="let Book of SelectedBookInfo; let i =index">
+                                <div class="serialno">
+                                    {{i+1}}
+                                </div>
+                                <div class="description">
+                                  
+                                  <div class="cover">
+                                    <a href="https://www.bookswagon.com/book/word-power-made-easy-norman/9788183071000"
+                                      target="_parent">
+          
+                                      <img id="imgProduct" width="35px" height="50px"
+                                        src="https://d2g9wbak88g7ch.cloudfront.net/productimages/image65/000/9788183071000.jpg"
+                                        alt="Word Power Made Easy"></a>
+                                  </div>
+                                  <div class="summary">
+          
+                                    <div class="title">
+                                      <label id="BookCart_lvCart_ctrl0_lblProductTitle">{{Book.bookName}}</label>
+          
+                                    </div>
+                                    <div class="author-publisher">
+                                      <label id="BookCart_lvCart_ctrl0_lblAuthors">by
+                                         <a >{{Book.author}}</a></label>
+                                    </div>
+                                  
+                                  </div>
+                                </div>
+                                <div class="quality">
+                                    <!-- <button (click)="decreaseQuantity(quantity,Book)">-</button> -->
+                                    <input  #box (keyup.enter)="onEnter(box.value,Book)" min="0" class="form-control" id="valueId"  class="qtytext" >
+                                    <!-- <button (click)="increaseQuantity(quantity,Book)">+</button> -->
+                                    
+                                  <a (click)="updateQuantity(box.value,Book)" >
+                                    <img src="https://www.bookswagon.com/images/reload-icon.png">   
+                                  </a>
+            
+                                </div>
+                                <div class="price">
+                                  
+                                  <div class="sale-price">
+                                    <label >{{Book.price |currency:'INR'}}</label>
+                                  </div>
+                                </div>
+                                <div class="total">
+                                  <label >{{Book.totalPrice | currency:'INR'}}</label>
+                                </div>
+                                <div class="acton">
+                                  <div class="wishlist">
+                                    <img alt="" title="" src="https://www.bookswagon.com/images/buttons/moveto.gif">
+                                    <a href="">Move to Wishlist</a>
+                                  </div>
+                                  <div class="remove">
+                                  <button  (click)="RemoveItem(Book)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                  </div>
+                                </div>
+                                <div class="clearfloat">
+                                </div>
+                              </div>
+                              
+          
+                            </div>
+                          </div>
+                        </div>
+                         <div class="shopping-bottom" >
+                          <div class="left"> </div>
+                          <div class="right">
+                            <div class="total-ammount">
+                              <table width="100%" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <p>
+                                        Total Gross
+                                      </p>
+                                    </td>
+                                    <td>:
+                                    </td>
+                                    <td class="total-gross">
+                                      <p>
+                                        <label id="BookCart_lvCart_lblTotalGross">{{grandTotal}}</label>
+                                      </p>
+                                    </td>
+                                    <td class="paddl10">
+                                      <label id="BookCart_lvCart_lblShippingTime" class="deliverytime">Ships within 4-6
+                                        days.</label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p>
+                                        <label id="BookCart_lvCart_lblShippingText">
+                                          Shipping (in India)</label>
+                                      </p>
+                                    </td>
+                                    <td>
+                                      <label id="BookCart_lvCart_lblShippingColon">
+                                        :</label>
+                                    </td>
+                                    <td class="total-gross">
+                                      <p>
+                                        <label id="BookCart_lvCart_lblShippingCharges">₹39</label>
+                                      </p>
+                                    </td>
+                                    <td class="paddl10"></td>
+                                  </tr>
+                                  <tr>
+                                    <td >
+                                      <p>
+          
+                                      </p>
+                                    </td>
+                                    <td>
+          
+                                    </td>
+                                    <td class="total-gross">
+                                      <p>
+          
+                                      </p>
+                                    </td>
+                                    <td class="paddl10">
+                                      <p>
+          
+          
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td >
+                                      <p>
+                                        <strong>Amount Payable</strong>
+                                      </p>
+                                    </td>
+                                    <td>:
+                                    </td>
+                                    <td>
+                                      <p class="gren-amount" style="color:green;font-weight: bold;">
+                                        <span>
+                                          <label id="BookCart_lvCart_lblNetAmount">{{amount}}</label>
+                                        </span>
+                                      </p>
+                                    </td>
+                                  </tr>
+          
+                                </tbody>
+                              </table>
+                              <div class="clearfloat">
+                              </div>
+                            </div>
+          
+                          </div>
+                          <div class="clearfloat">
+                          </div>
+                        </div>
+          
+                         <div class="shopping-action"> 
+                          <div class="shopMorebtn">
+                            <button class="btn btn-dark" style="margin-left: 10px;" [routerLink]="'/books'">Shop More items</button>
+                            <button class="btn btn-danger" style="float:right; margin-right: 10px;" [routerLink]="'/place-orderBook'" >Place Order</button>
+                          </div>
+                        
+                       
+                          <div class="clearfloat">
+                          </div>
+                        </div> 
+          
+          
+                      </div>
+                    </div>
+                  </div>
+            </ng-container>
+
+            <ng-container *ngIf="SelectedBookInfo.length==0">
+                <div class="empty-shopping-cart">
+                    Your Shopping Cart is currently empty. To add Books in your Shopping Cart, start
+            by searching or browsing through our book store. When a book interests you, click
+            on Add to Cart button. Books in Shopping Cart always reflect the most recent price,
+            displayed on their product pages.<br>
+                    <br>
+                    Please <a [routerLink]= "'/books'">Click here</a>
+                    to continue shopping
+                </div>
+             </ng-container>
+             
+        </mat-card-content>
+      
+      </mat-card>
+
+        
+ 
+    
+    </div>
+  </div>

@@ -1,0 +1,120 @@
+.left-column {
+    width: 215px;
+    float:left;
+    padding:0 ;
+    margin-left:140px;
+    border-right: 2px solid  ;
+    height:700px;
+}
+.bc-menu {
+    width: 201px;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.bc-menu .title {
+    color: #bc3232;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0 0 10px 0;
+    margin-left: 28px;
+    padding:30px 0 0 0;
+   
+}
+
+.bc-menu ul {
+    list-style-type:unset;
+}
+
+.bc-menu .bullet-link li {
+    background-position: 0 5px !important;
+ }
+.bc-menu ul a {
+    display: block;
+    padding: 4px 4px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #555;
+    font-size: 14px !important;
+}
+
+.bc-menu ul a:hover {
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+   color:#bc3232;
+}
+
+.bc-menu li {
+    background-repeat: no-repeat;
+    font-weight: 400;
+    padding-left: 7px;
+    line-height: 15px; 
+ }    
+
+
+
+.card{
+    display: inline;
+   
+}
+
+.example-card{
+    width: 300px;
+    margin: 5px;
+    border-style:solid; 
+    display: inline-block;
+    border-radius: 15px;
+    background-color:rgb(238, 212, 83);
+
+}
+
+.mat-BookName{
+    color: #555555;
+    font:18px 'Lucida Sans', sans-serif;
+  
+}
+.price{
+    width: 65px;
+    float: left;
+}
+.sell{
+    font-weight: bold;
+    color: #bc3232;
+    font-size: 16px !important;
+    margin-left: 2px;
+}
+.attributes{
+    margin-left: 30%;
+}
+.attributes-head{
+    color: #555555;
+}
+.btn-black{
+    background-color: black;
+    color:white;
+    margin-left: 10px;   
+}
+.AddBook{
+    padding:10px
+}
+
+.example-small-box, .example-large-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .example-small-box {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .example-large-box {
+    height: 300px;
+    width: 300px;
+  }
