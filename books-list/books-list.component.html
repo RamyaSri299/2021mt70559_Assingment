@@ -1,0 +1,83 @@
+<br>
+<!-- <div class="row">
+    <div class="col">
+        <div class="pagedivision">
+            <div class="inputdata">
+                <mat-form-field appearance="fill" class="example-full-width">
+                    <input matInput placeholder="Book Id">
+                  </mat-form-field>
+                 
+                  <mat-form-field appearance="fill" class="example-full-width">
+                    <input matInput placeholder=" BookName" >
+                  </mat-form-field>
+        
+                  <mat-form-field appearance="fill" class="example-full-width">
+                    <input matInput placeholder=" Author" >
+                  </mat-form-field>
+        
+                  <mat-form-field appearance="fill" class="example-full-width">
+                    <input matInput placeholder=" Price" >
+                  </mat-form-field>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="button-row">
+                        <button mat-raised-button color="primary" class="add" >Add</button>
+                        <button mat-raised-button color="accent" class="update">Update</button>
+                        <button mat-raised-button color="warn" class="delete">Delete</button>
+                      </div>
+                </div>  
+            </div>
+          
+        </div>
+    </div>
+</div> -->
+
+
+<br>
+<div class="tableborder">
+    <div class="example-container mat-elevation-z8">
+        <div>
+        <a mat-raised-button color="primary" style="margin: 2%" (click)="PopUpAddBook('')">Add Book</a>
+        </div>
+        <mat-table #table [dataSource]="BookDetails">
+      
+        
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.id}}</mat-cell>
+          </ng-container>
+      
+         
+          <ng-container matColumnDef="BookName">
+            <mat-header-cell *matHeaderCellDef> BookName </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.BookName}}</mat-cell>
+          </ng-container>
+      
+          
+          <ng-container matColumnDef="AuthorName">
+            <mat-header-cell *matHeaderCellDef> Author Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.AuthorName}} </mat-cell>
+          </ng-container>
+      
+          <ng-container matColumnDef="Price">
+            <mat-header-cell *matHeaderCellDef> Price</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Price | currency:  'INR':true}} </mat-cell>
+          </ng-container>
+    
+          <ng-container matColumnDef="Action">
+            <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                <button mat-raised-button color="accent" class="edit" (click)="EditBookData(element.id)">Edit</button>
+                    <button mat-raised-button color="warn" class="delete" (click)="DeleteBook(element.id)">Delete</button>
+                  
+            </mat-cell>
+          </ng-container>
+      
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+</div>
+
+  
