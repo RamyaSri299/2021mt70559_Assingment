@@ -1,0 +1,25 @@
+.pagedivision{
+  width:100%;
+  height: auto;
+    border-style:ridge;
+
+}
+.tableborder{
+    width:100%;
+    height: auto;
+      border-style:ridge;
+}
+.example-full-width{
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+.button-row{
+    margin-left: 75%;
+
+}
+.update {
+    margin-left: 20px;
+}
+.delete{
+    margin-left:20px ;
+}

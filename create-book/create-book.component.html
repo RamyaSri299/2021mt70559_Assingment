@@ -1,0 +1,28 @@
+
+<form class="example-form" [formGroup]="BookForm" (ngSubmit)="SaveBookData()"> 
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>BookID</mat-label>
+      <input matInput placeholder="BookID" formControlName="id">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>BookName</mat-label>
+      <input matInput placeholder="BookName" formControlName="BookName">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>AuthorName</mat-label>
+      <input matInput placeholder="AuthorName" formControlName="AuthorName">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Price</mat-label>
+      <input matInput placeholder="Price" formControlName="Price">
+    </mat-form-field>
+  
+  <div class="button-row">
+    <button mat-raised-button color="primary">Save</button>
+    <button mat-raised-button color="accent" (click)="closePopup()">Close</button>
+  </div>
+  </form>
+  
