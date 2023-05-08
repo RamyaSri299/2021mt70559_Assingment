@@ -12,3 +12,8 @@ export class ArtsPhtography{
    public  subTypeOfBook:string;
    public  BookTypeId:number;
 }
+
+public class Arts{
+  public ArtId:number;
+  public ArtName: string;
+}
